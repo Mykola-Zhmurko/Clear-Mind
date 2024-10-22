@@ -1,0 +1,109 @@
+body {
+  font-family: Inter;
+  font-weight: 400;
+  background-color: var(--backgroundLight);
+  margin: 0px;
+  margin-top: 48px;
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: Noto Sans JP;
+  font-weight: 700;
+  color: var(--text);
+  margin: 0;
+}
+
+html {
+  font-size: 100%; /* 16px */
+}
+
+h1 {
+  font-size: 4.210rem; /* 67.36px */
+}
+
+h2 {
+  font-size: 3.158rem; /* 50.56px */
+}
+
+h3 {
+  font-size: 2.369rem; /* 37.92px */
+}
+
+h4 {
+  font-size: 1.777rem; /* 28.48px */}
+
+h5 {
+  font-size: 1.333rem; /* 21.28px */
+}
+
+small {
+  font-size: 0.750rem; /* 12px */
+}
+
+::selection {
+  background: #acacac; /* WebKit/Blink Browsers */
+}
+::-moz-selection {
+  background: #acacac; /* Gecko Browsers */
+}
+
+:root {
+  --textDark: #f0e7e3;
+  --backgroundDark: #070707;
+  --textLight: #050316;
+  --backgroundLight: #fbfbfe;
+  --primary: #f4a908;
+  --secondary: #ffd8a6;
+  --accent: #ff6a00;
+}
+
+button {
+  padding: 10px 20px 10px 20px;
+  border-radius: 8px;
+  background-color: var(--secondary);
+  border: 2px solid var(--secondary);
+  cursor: pointer;
+}
+
+.mainButton {
+  background-color: var(--primary);
+  border: 2px solid var(--primary);
+}
+
+.logoText {
+  font-family: Fugaz One;
+}
+
+a {
+  color: var(--textLight);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Small devices (landscape phones, 425px and up)*/
+@media (min-width: 425px) {
+  body {
+    margin-top: 62px;
+  }
+}
+
+/* Medium devices (tablets, 768px and up)*/
+@media (min-width: 768px) {
+  body {
+    margin-top: 72px;
+  }
+}
+
+/* Large devices (desktops, 992px and up)*/
+@media (min-width: 992px) {
+}
+
+/* X-Large devices (large desktops, 1200px and up)*/
+@media (min-width: 1200px) {
+}
+
+/* XX-Large devices (larger desktops, 1400px and up)*/
+@media (min-width: 1400px) {
+}

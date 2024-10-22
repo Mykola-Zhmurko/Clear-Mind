@@ -1,0 +1,98 @@
+:root {
+  --textDark: #f0e7e3;
+  --backgroundDark: #070707;
+  --textLight: #050316;
+  --backgroundLight: #fbfbfe;
+  --primary: #f4a908;
+  --secondary: #ffd8a6;
+  --accent: #ff6a00;
+}
+
+
+.header {
+  width: 100vw;
+  background-color: var(--backgroundLight);
+  display: flex;
+  height: 48px;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  padding-left: 14px;
+}
+
+.logoText {
+  font-size: larger;
+  cursor: default;
+}
+
+.header button {
+  padding: 6px 8px 6px 8px;
+  font-size: 16px;
+}
+
+.header a {
+  visibility: hidden;
+}
+
+.headerRight {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+  margin-right: 24px;
+}
+
+/* Small devices (landscape phones, 425px and up)*/
+@media (min-width: 425px) {
+  .header {
+    height: 62px;
+  }
+  .header a {
+    visibility: visible;
+  }
+  .logoText {
+    font-size: x-large;
+  }
+  .header button {
+    font-size: 16px;
+  }
+}
+
+/* Medium devices (tablets, 768px and up)*/
+@media (min-width: 768px) {
+  .header {
+    height: 72px;
+  }
+  .header a {
+    visibility: visible;
+  }
+  .logoText {
+    font-size: xx-large;
+  }
+  .header button {
+    padding: 8px 10px 8px 10px;
+    font-size: 18px;
+  }
+  .header a {
+    font-size: 18px;
+  }
+  .headerRight {
+    gap: 14px;
+  }
+}
+
+/* Large devices (desktops, 992px and up)*/
+@media (min-width: 992px) {
+}
+
+/* X-Large devices (large desktops, 1200px and up)*/
+@media (min-width: 1200px) {
+}
+
+/* XX-Large devices (larger desktops, 1400px and up)*/
+@media (min-width: 1400px) {
+}

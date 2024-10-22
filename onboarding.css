@@ -1,0 +1,85 @@
+:root {
+  --textDark: #f0e7e3;
+  --backgroundDark: #070707;
+  --textLight: #050316;
+  --backgroundLight: #fbfbfe;
+  --primary: #f4a908;
+  --secondary: #ffd8a6;
+  --accent: #ff6a00;
+}
+
+.onboardingSection h1 {
+  font-size: 2.369rem;
+}
+
+.onboardingSection span {
+  background: linear-gradient(45deg, var(--primary), var(--accent));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.onboardingSection p {
+  font-size: 1.333rem;
+}
+
+.onboardingSection {
+  height: calc(100vh - 48px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 10vw 0 10vw;
+  overflow-x: hidden;
+}
+
+.onboardingImage {
+  visibility: hidden;
+  width: 0px;
+}
+
+/* Small devices (landscape phones, 425px and up)*/
+@media (min-width: 425px) {
+  .onboardingSection {
+    height: calc(100vh - 62px);
+  }
+}
+
+/* Medium devices (tablets, 768px and up)*/
+@media (min-width: 768px) {
+  .onboardingImage {
+    visibility: visible;
+    width: 100%;
+  }
+  .onboardingSection {
+    height: calc(100vh - 72px);
+  }
+  .onboardingInfo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10vw;
+  }
+}
+
+/* Large devices (desktops, 992px and up)*/
+@media (min-width: 992px) {
+}
+
+/* X-Large devices (large desktops, 1200px and up)*/
+@media (min-width: 1200px) {
+  .onboardingSection h1 {
+    font-size: 4.210rem;
+  }
+  
+  .onboardingSection p {
+    font-size: 1.777rem;
+  }
+  
+  .onboardingButtons button {
+    font-size: 1.333rem;
+  }
+}
+
+/* XX-Large devices (larger desktops, 1400px and up)*/
+@media (min-width: 1400px) {
+}
