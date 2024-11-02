@@ -27,46 +27,50 @@ function _createModalFooter(buttons = []){
 
 function _createModal(options){
     const DEFAULT_WIDTH = "600px"
-    const  modal = document.createElement("div")
-    modal.classList.add("vmodal")
-    modal.insertAdjacentHTML("afterbegin", `  
+    const  passwordModal = document.createElement("div")
+    passwordModal.classList.add("vmodal")
+    passwordModal.insertAdjacentHTML("afterbegin", `  
         <div class="modal-overlay" data-close="true">
             <div class="modal-window" style="width: ${options.width}">
                 <div class="modal-header">
-                   <span class="modal-title">${options.title || "window"}</span>
+                   <span class="modal-title">Enter your password</span>
                    ${options.closable ? `<span class="modal-close" data-close="true">&times;</span>`: ""}  
                    </div>
                 <div class="modal-body" data-content>
-                    ${options.content || ''}
+                    <div>
+                        <label for="pass">Password:</label>
+                        <input type="password" id="pass"/>
+                    </div>
                 </div>
             </div>
         </div>  
     `)
     const footer = _createModalFooter(options.footerButtons)
-    footer.appendAfter(modal.querySelector('[data-content]'))
-    document.body.appendChild(modal)
-    return modal
+    footer.appendAfter(passwordModal.querySelector('[data-content]'))
+    document.body.appendChild(passwordModal)
+    return passwordModal
 }
 
 
 
 
-$.modal = function(options){
+$.passwordModal = function(options){
     const ANIMITION_SPEED = 200
-    const $modal = _createModal(options)
+    const $passwordModal = _createModal(options)
     let closing = false
+    let closed = true
 
 
-    const modal = {
+    const passwordModal = {
         open(){
-        !closing && $modal.classList.add("open")
+        !closing && $passwordModal.classList.add("open")
         },
         close(){
             closing = true
-            $modal.classList.remove("open")
-            $modal.classList.add("hide")
+            $passwordModal.classList.remove("open")
+            $passwordModal.classList.add("hide")
             setTimeout(() => {
-                $modal.classList.remove("hide")
+                $passwordModal.classList.remove("hide")
                 closing = false
                 if(typeof options.onClose === 'function'){
                     options.onClose()
@@ -77,10 +81,13 @@ $.modal = function(options){
 
     const listener = event =>{  
         if( event.target.dataset.close){//in dataset sind alle Atrribute gespeichert und wir können damit arbeiten
-            modal.close()
+            passwordModal.close()
         }
     }
 }
 
-// var signBtn = document.getElementById("SignIN")
-// signBtn.onclick = modal.open()
+if(closed === true){
+    var signBtn = document.getElementById("SignIN")
+    signBtn.onclick = passwordModal._createModal()    
+    passwordModal.open()
+}

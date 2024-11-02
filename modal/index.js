@@ -1,5 +1,5 @@
 const passwordModal = $.modal({
-    title: "Die Ware kostet:",
+    title: "Enter your Password:",
     closable: true,
     width: '400px',
     footerButtons:[
