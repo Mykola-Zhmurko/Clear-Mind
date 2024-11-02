@@ -1,0 +1,76 @@
+:root {
+  --textDark: #f0e7e3;
+  --backgroundDark: #070707;
+  --textLight: #050316;
+  --backgroundLight: #fbfbfe;
+  --primary: #f4a908;
+  --secondary: #ffd8a6;
+  --accent: #ff6a00;
+}
+
+.onboardingSection h1 {
+  font-size: 2.369rem;
+}
+
+.onboardingSection span {
+  background: linear-gradient(45deg, var(--primary), var(--accent));
+  color: #0000;
+  background-clip: text;
+}
+
+.onboardingSection p {
+  font-size: 1.333rem;
+}
+
+.onboardingSection {
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 48px);
+  margin: 0 10vw;
+  display: flex;
+  overflow-x: hidden;
+}
+
+.onboardingImage {
+  visibility: hidden;
+  width: 0;
+}
+
+@media (width >= 425px) {
+  .onboardingSection {
+    height: calc(100vh - 62px);
+  }
+}
+
+@media (width >= 768px) {
+  .onboardingImage {
+    visibility: visible;
+    width: 100%;
+  }
+
+  .onboardingSection {
+    height: calc(100vh - 72px);
+  }
+
+  .onboardingInfo {
+    flex-direction: row;
+    align-items: center;
+    gap: 10vw;
+    display: flex;
+  }
+}
+
+@media (width >= 1200px) {
+  .onboardingSection h1 {
+    font-size: 4.21rem;
+  }
+
+  .onboardingSection p {
+    font-size: 1.777rem;
+  }
+
+  .onboardingButtons button {
+    font-size: 1.333rem;
+  }
+}
+/*# sourceMappingURL=index.71253652.css.map */
